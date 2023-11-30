@@ -3,6 +3,6 @@ RUN pip install spacy==3.6.0
 RUN pip install spacy-huggingface-hub==0.0.10
 RUN mkdir /app /app/model /app/out
 COPY ./run.sh /app/run.sh
-WORKDIR /app
 RUN chmod +x /app/run.sh
+WORKDIR /app
 
