@@ -1,0 +1,10 @@
+
+services:
+  veld:
+    build: .
+    command: /app/run.sh
+    volumes:
+      - ./model/:/app/model/
+    environment:
+      - hf_token
+
