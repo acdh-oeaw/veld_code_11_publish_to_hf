@@ -1,5 +1,5 @@
 
-### upload to HuggingFace with one command, don't keep redundant data
+### upload to HuggingFace with one command, avoid redundant data
 
 To streamline the clunky HuggingFace upload, this docker service encapsulate the dependencies and 
 persists reproducible logic (from which pieces might be taken for manual workflows as well).
