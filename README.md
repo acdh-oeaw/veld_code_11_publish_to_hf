@@ -6,7 +6,7 @@ makes the calls reproducible with one command only, while also avoiding tripling
 data size (since spaCy's package creates a whl file *and* a whole duplicated model folder, besides 
 the original).
 
-### prerequesites
+### prerequisites
 
 - have a write-token on HF 
 - have docker and docker compose installed
