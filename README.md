@@ -3,7 +3,8 @@
 
 To streamline the clunky HuggingFace upload, this docker service encapsulates the dependencies and 
 makes the calls reproducible with one command only, while also avoiding tripling the local model 
-data size (since spaCy's package creates a whl, and a whole duplicated model folder).
+data size (since spaCy's package creates a whl file *and* a whole duplicated model folder, besides 
+the original).
 
 ### prerequesites
 
