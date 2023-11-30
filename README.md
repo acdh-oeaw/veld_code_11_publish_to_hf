@@ -16,7 +16,7 @@ persists reproducible logic (from which pieces might be taken for manual workflo
 
 Replace `<TOKEN>` with your write-token from HF:
 ```
-docker compose -f veld.yaml build
+docker compose -f veld.yaml build # only needed once
 docker compose -f veld.yaml run -e hf_token=<TOKEN> veld
 ```
 
