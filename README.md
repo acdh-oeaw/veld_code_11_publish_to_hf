@@ -1,8 +1,9 @@
 
 ### upload to HuggingFace with one command, avoid redundant data
 
-To streamline the clunky HuggingFace upload, this docker service encapsulate the dependencies and 
-persists reproducible logic (from which pieces might be taken for manual workflows as well).
+To streamline the clunky HuggingFace upload, this docker service encapsulates the dependencies and 
+makes the calls reproducible with one command only, while also avoiding tripling the local model 
+data size (since spaCy's package creates a whl, and a whole duplicated model folder).
 
 ### prerequesites
 
