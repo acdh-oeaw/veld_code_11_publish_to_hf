@@ -1,5 +1,5 @@
 
-### upload to HuggingFace with one command, avoid redundant data
+### upload spaCy models to HuggingFace with one command and avoid redundant model data
 
 To streamline the clunky HuggingFace upload, this docker service encapsulates the dependencies and 
 makes the calls reproducible with one command only, while also avoiding tripling the local model 
