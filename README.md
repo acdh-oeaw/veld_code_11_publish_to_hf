@@ -22,3 +22,7 @@ docker compose -f veld.yaml build # only needed once
 docker compose -f veld.yaml run -e hf_token=<TOKEN> veld
 ```
 
+### caveats
+
+Only tested with spaCy 3.6. But I guess other versions should be usable too by branching off this
+repo and modyfing the Dockerfile.
