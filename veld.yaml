@@ -3,8 +3,8 @@ services:
   veld:
     build: .
     command: /app/run.sh
-    volumes:
-      - ./model/:/app/model/
     environment:
       - hf_token
+      - version
+      - model_name # don't give the model_name double underscores, it might crash while publishing
 
