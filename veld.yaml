@@ -3,6 +3,8 @@ services:
   veld:
     build: .
     command: /app/run.sh
+    volumes:
+      - ./model/:/veld/input/
     environment:
       - hf_token
       - version
