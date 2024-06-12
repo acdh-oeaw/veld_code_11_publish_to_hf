@@ -1,7 +1,14 @@
 #!/bin/bash
 
+source /veld/code/token.txt
+
+echo "used token: ${hf_token}"
+
+in_model_folder="/veld/input/${in_model_folder}"
+
 echo "#################### building whl with spaCy's package"
-python -m spacy package --force /veld/input/ /tmp/out --build wheel --version $version --name $model_name
+python -m spacy package --force "$in_model_folder" /tmp/out --build wheel --version "$version" \
+  --name "$model_name"
 
 echo "#################### finding path of produced whl file"
 out_folder=$(ls /tmp/out)

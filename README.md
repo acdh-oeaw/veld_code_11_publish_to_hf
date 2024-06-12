@@ -21,13 +21,14 @@ build:
 docker compose -f veld.yaml build
 ```
 
-run with parameters:
-- `<TOKEN>` with your write-token from HF
-- `<model_name>` with the name you want to give to your model (note that double underscore might not
-  work due to some bug apparently)
-- `<version>` duh
+export your token into the current shell:
 ```
-docker compose -f veld.yaml run -e hf_token=<TOKEN> -e version=<model_name> -e model_name=<version> veld
+export hf_token=<TOKEN>
+```
+
+run
+```
+docker compose -f veld.yaml up
 ```
 
 ### caveats
@@ -35,3 +36,4 @@ docker compose -f veld.yaml run -e hf_token=<TOKEN> -e version=<model_name> -e m
 Only tested with spaCy 3.6 and some German base models. But other versions should be usable too by
 branching off this repo and modifying the Dockerfile and the spaCy dependencies therein according to
 your needs.
+

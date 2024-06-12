@@ -1,14 +1,40 @@
 x-veld:
   code:
+    about:
+      description: "simple service to push to spacy since that is surprisingly cumbersome and
+        creates redundancies with regards to data model usage. Note that this expects a token in the
+        file ./src/token.txt, use the template ./src/token_template.txt as a copy for your own
+        ./src/token.txt which is never indexed by git."
+      topics: "NLP"
+
+    inputs:
+      volume: /veld/input/
+      file_formats: "spacy model"
+      contents:
+        - "NLP model"
+        - "NER model"
+
+    environment:
+      in_model_folder: 
+        type: file
+        volume: /veld/input/
+      version: 
+        description: "version of the model, to be used for huggingface metadata."
+        type: str
+        optional: true
+      # don't put double underscores into the model name, as this crashes spacy while publishing
+      model_name: 
+        description: "name of the model, to be used for huggingface metadata."
+        type: str
 
 services:
   veld:
     build: .
-    command: /app/run.sh
+    command: bash /veld/code/run.sh
     volumes:
-      - ./model/:/veld/input/
+      - ./src/:/veld/code/
     environment:
-      - hf_token
-      - version
-      - model_name # don't give the model_name double underscores, it might crash while publishing
+      in_model_folder: null
+      version: null
+      model_name: null
 
